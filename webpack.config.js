@@ -55,6 +55,8 @@ module.exports = {
     port: 3003,
     // gzip
     // compress: false
+    // 将页面重定向至入口文件，以output为根目录（解决react-router无法进行前端路由的问题）
+    historyApiFallback: true
   },
   plugins: [
     // 热替换插件
