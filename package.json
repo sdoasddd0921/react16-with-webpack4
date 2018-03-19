@@ -1,0 +1,27 @@
+{
+  "name": "react16-with-webpack4",
+  "homepage": "https://sdoasddd0921.github.io/react16-with-webpack4",
+  "version": "0.0.1",
+  "keywords": [
+    "react16",
+    "webpack4"
+  ],
+  "author": "sdoasddd0921",
+  "license": "ISC",
+  "devDependencies": {
+    "html-webpack-plugin": "^3.0.6",
+    "react": "^16.2.0",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "dependencies": {
+    "antd": "^3.3.0",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "react-dom": "^16.2.0"
+  }
+}
