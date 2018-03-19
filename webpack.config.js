@@ -48,9 +48,7 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     // 在terminal关闭警告
-    stats: {
-      warnings: false
-    },
+    stats: 'errors-only',
     // 在browser关闭警告
     clientLogLevel: 'none',
     hot: true,
