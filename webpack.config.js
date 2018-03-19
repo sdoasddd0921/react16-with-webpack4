@@ -19,8 +19,28 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        use: 'babel-loader',
+        // 如果需要配置loader的options
+        // use的参数必须为对象
+        use: {
+          loader: 'babel-loader',
+          options: {
+            // babel解析react和ES6
+            "presets": [
+              "react",
+              "env"
+            ],
+            // antd引入模块后按需加载对应的css
+            "plugins": [
+              ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }]
+            ]
+          }
+        },
         exclude: /node_modules/
+      },
+      {
+        test: /\.css$/,
+        // 不用配置options的loader的写法
+        use: ['style-loader', 'css-loader']
       }
     ]
   },
