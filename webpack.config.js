@@ -27,7 +27,8 @@ module.exports = {
             // babel解析react和ES6
             "presets": [
               "react",
-              "env"
+              "env",
+              "stage-2"
             ],
             // antd引入模块后按需加载对应的css
             "plugins": [
