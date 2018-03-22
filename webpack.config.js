@@ -1,6 +1,10 @@
 const path = require('path');
+const glob = require('glob');
 const webpack = require('webpack');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+const isDev = process.env.NODE_ENV === 'development';
 
 module.exports = {
   // 设置打包模式
@@ -41,7 +45,9 @@ module.exports = {
       {
         test: /\.css$/,
         // 不用配置options的loader的写法
-        use: ['style-loader', 'css-loader']
+        // use: ['style-loader', 'css-loader']
+        // 如果不是dev则抽取CSS
+        use: isDev ? ['style-loader', 'css-loader'] : [MiniCssExtractPlugin.loader, 'css-loader']
       }
     ]
   },
@@ -67,6 +73,12 @@ module.exports = {
       template: 'asserts/index.html',
       // 以output为输出目录
       filename: 'index.html'
+    }),
+    // extract css
+    isDev ? null :
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].bundle.css',
+      chunkFilename: '[id].css'
     })
   ]
 };
