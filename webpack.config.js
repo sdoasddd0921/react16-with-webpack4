@@ -6,7 +6,7 @@ module.exports = {
   // 设置打包模式
   // 若要开启devserver则要设置为development
   // 设置为production的时候在dev下rebuild超级慢!
-  mode: 'development', 
+  // mode: 'development', 
   // 入口js文件
   entry: path.resolve(__dirname, 'src/index.js'),
   // 打包输出

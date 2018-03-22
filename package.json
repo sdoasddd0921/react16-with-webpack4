@@ -9,9 +9,11 @@
   "author": "sdoasddd0921",
   "license": "ISC",
   "scripts": {
-    "start": "webpack-dev-server"
+    "start": "webpack-dev-server --mode development",
+    "build": "webpack --mode production"
   },
   "devDependencies": {
+    "gh-pages": "^1.1.0",
     "html-webpack-plugin": "^3.0.6",
     "react": "^16.2.0",
     "webpack": "^4.1.1",
