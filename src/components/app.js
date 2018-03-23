@@ -2,6 +2,9 @@ import React from 'react';
 import { Layout, Menu, Icon } from 'antd';
 import '../css/app.css';
 import InputForm from '../components/form';
+import host from '../../asserts/host.json';
+
+console.log('read test: ', host)
 
 const { Header, Footer, Sider, Content } = Layout;
 const { Item } = Menu;
